@@ -10,9 +10,27 @@ DrawSquare Support - Yes<br>
 Text Support - No<br>
 Texture Support - No
 
-Example Scripts
-``lua
+Example Scripts<br>
+```
 GAME_TICKRATE = 80
-``
+
+WINDOWDATA_Title = "hello world"
+
+if WINDOWDATA_Title == "hello world" then
+  print("hi")
+end
+
+if C_Tick % 10 then
+  PlaySound("sound.mp3")
+end
+
+if IsKeyDown(13) then
+  print("enter is down")
+end
+
+DrawBackground(255,255,0)
+
+UpdateWindow()
+```
 
 Developed and mantained by shadowdev / shadowstudios 2025

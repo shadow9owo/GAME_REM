@@ -10,7 +10,8 @@ DrawSquare Support - Yes<br>
 Text Support - No<br>
 Texture Support - No
 
-Example Scripts<br>
+
+Example Script<br>
 ```lua
 GAME_TICKRATE = 80
 

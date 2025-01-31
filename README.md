@@ -1,15 +1,11 @@
 # GAME_REM
 C / LUA small factor game engine
 
-Sound Support - Yes (mp3)
-
-Input Support - Yes
-
-DrawPixel Support - Yes
-
-DrawSquare Support - Yes
+Sound Support - Yes (mp3)<br>
+Input Support - Yes<br>
+DrawPixel Support - Yes<br>
+DrawSquare Support - Yes<br>
 
 
-Text Support - No
-
+Text Support - No<br>
 Texture Support - No

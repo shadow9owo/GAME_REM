@@ -34,6 +34,6 @@ DrawBackground(255,255,0)
 UpdateWindow()
 ```
 
-<img style="width=80vw" src="JSE.jpg"></img>
+<img src="JSE.jpg"></img>
 
 Developed and mantained by shadowdev / shadowstudios 2025

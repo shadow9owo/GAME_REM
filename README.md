@@ -11,7 +11,7 @@ Text Support - No<br>
 Texture Support - No
 
 Example Scripts<br>
-```
+```lua
 GAME_TICKRATE = 80
 
 WINDOWDATA_Title = "hello world"

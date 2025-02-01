@@ -33,5 +33,6 @@ extern int lua_UpdateWindow() {
     InvalidateRect(WINDOWDATA_handle, NULL, TRUE);
     UpdateWindow(WINDOWDATA_handle);
     Pixel_Array_Lenght = 0;
+    Bmp_Array_Length = 0;
     return 0;
 }

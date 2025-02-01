@@ -2,9 +2,6 @@
 //DEVELOPED BY SHADOWSTUDIOS 2025
 //shadowdevreal@protonmail.com
 
-#define NK_IMPLEMENTATION
-#include "headers/Window/nuklear.h"
-
 #include <stdio.h>
 #include "headers/Window/Game.h"
 #include <stdbool.h>

@@ -9,6 +9,7 @@
 #include "WindowBG.h"
 #include "Sound.h"
 #include "Keys.h"
+#include "Brush.h"
 
 void init_lua_funcs(lua_State *L)
 {
@@ -20,5 +21,7 @@ void init_lua_funcs(lua_State *L)
     lua_register(L,"DrawSquare",lua_drawsquare);
     lua_register(L,"PlaySound",lua_Playsound);
     lua_register(L,"IsKeyDown",lua_IsKeyDown);
+    lua_register(L,"SetBrushColor",lua_SetBrushColor);
+    lua_register(L,"DrawImage",lua_drawimage);
     return;
 }

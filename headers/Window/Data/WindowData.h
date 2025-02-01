@@ -33,6 +33,8 @@ extern bool iskeydown(int keycode) {
     }
 }
 
+HBITMAP hBitmap = NULL;
+
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
     static POINT ptOld;
 
@@ -41,7 +43,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
         BackgroundColor = CreateSolidBrush(RGB(255, 255, 255));  
     }
     if (BrushColor == NULL) {
-        BrushColor = CreateSolidBrush(RGB(2, 2, 2));  
+        BrushColor = CreateSolidBrush(RGB(0, 0, 0));  
     }
 
     switch (uMsg) {
@@ -108,6 +110,13 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                 };
                 FillRect(hdcMem, &rect, BrushColor);
             }
+            for (size_t i = 0; i < Bmp_Array_Length; i++)
+            {
+                GetObject(hBitmap, sizeof(BITMAP), &Bmp_Array[i]);
+
+                BitBlt(hdc, Bmp_Pos_Array[i][0], Bmp_Pos_Array[i][1], Bmp_Pos_Array[i][2], Bmp_Pos_Array[i][3], hdcMem, 0, 0, SRCCOPY);
+            }
+            
         
             BitBlt(hdc, 0, 0, WINDOWDATA_WindowWidth, WINDOWDATA_WindowHeight, hdcMem, 0, 0, SRCCOPY);
 
@@ -117,6 +126,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
         
             EndPaint(hwnd, &ps);
             Pixel_Array_Lenght = 0;
+            Bmp_Array_Length = 0;
         
             return 0;
         }

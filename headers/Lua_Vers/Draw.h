@@ -28,14 +28,13 @@ extern int lua_drawimage(lua_State *L)
     snprintf(fullPath, sizeof(fullPath), "%s\\assets\\%s", currentDir, inputPath);
 
     Bmp_Array[Bmp_Array_Length] = (HBITMAP)LoadImage(NULL, fullPath, IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
-    
-    // Use consistent variable name (Length instead of Lenght)
+
     Bmp_Pos_Array[Bmp_Array_Length][0] = luaL_checkinteger(L, 2);
     Bmp_Pos_Array[Bmp_Array_Length][1] = luaL_checkinteger(L, 3);
     Bmp_Pos_Array[Bmp_Array_Length][2] = luaL_checkinteger(L, 4);
     Bmp_Pos_Array[Bmp_Array_Length][3] = luaL_checkinteger(L, 5);
 
-    Bmp_Array_Length++;  // Also fix here
+    Bmp_Array_Length++;
 
     lua_pushinteger(L, 0);
     return 0;

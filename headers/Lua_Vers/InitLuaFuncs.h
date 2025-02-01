@@ -10,6 +10,7 @@
 #include "Sound.h"
 #include "Keys.h"
 #include "Brush.h"
+#include "Mouse.h"
 
 void init_lua_funcs(lua_State *L)
 {
@@ -23,5 +24,7 @@ void init_lua_funcs(lua_State *L)
     lua_register(L,"IsKeyDown",lua_IsKeyDown);
     lua_register(L,"SetBrushColor",lua_SetBrushColor);
     lua_register(L,"DrawImage",lua_drawimage);
+    lua_register(L,"GetMouseX",lua_getmouse_X);
+    lua_register(L,"GetMouseY",lua_getmouse_Y);
     return;
 }

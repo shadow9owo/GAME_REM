@@ -10,7 +10,7 @@ DrawSquare Support - Yes<br>
 
 
 Text Support - No<br>
-Texture Support - No
+Texture Support - Yes
 
 
 Example Script<br>

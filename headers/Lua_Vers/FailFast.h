@@ -9,7 +9,7 @@
 
 int lua_FailFast(lua_State *L) 
 {
-    MessageBoxA(NULL,luaL_checkinteger(L,1),WINDOWDATA_Title,MB_OK | MB_ICONERROR);
+    MessageBoxA(NULL,luaL_checkstring(L,1),WINDOWDATA_Title,MB_OK | MB_ICONERROR);
     GAME_ISRUNNING = false;
     return 0;
 }

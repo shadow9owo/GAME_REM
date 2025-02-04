@@ -11,6 +11,8 @@
 #include "Keys.h"
 #include "Brush.h"
 #include "Mouse.h"
+#include "FailFast.h"
+#include "WindowUtils.h"
 
 void init_lua_funcs(lua_State *L)
 {
@@ -26,5 +28,8 @@ void init_lua_funcs(lua_State *L)
     lua_register(L,"DrawImage",lua_drawimage);
     lua_register(L,"GetMouseX",lua_getmouse_X);
     lua_register(L,"GetMouseY",lua_getmouse_Y);
+    lua_register(L,"FailFast",lua_FailFast);
+    lua_register(L,"WindowVisibility",lua_ConsoleVisibility);
+
     return;
 }

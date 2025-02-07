@@ -58,7 +58,7 @@ int main() {
 
     //execute an script on app load
     if (luaL_dofile(L, "scripts/onload.lua") != LUA_OK) {
-        printf("%s", lua_tostring(L, -1));
+        printf("\n%s", lua_tostring(L, -1));
         lua_pop(L, 1);
     }
 
@@ -76,8 +76,9 @@ int main() {
         {
             Pixel_Array_Lenght = 0;
             if (luaL_dofile(L, "scripts/update.lua") != LUA_OK) {
-                printf("%s", lua_tostring(L, -1));
+                printf("\n%s", lua_tostring(L, -1));
                 lua_pop(L, 1);
+                GAME_ISRUNNING = false;
             }
         }
         else 

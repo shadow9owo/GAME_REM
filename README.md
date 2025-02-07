@@ -1,6 +1,8 @@
 # GAME_REM
 C / LUA small factor game engine
 
+# CANCELLED DUE TO NO GPU SUPPORT AN REMAKE IS PLANNED 
+
 (goal is to add support to all of these things below and keep the engine under 1k lines excluding external packages)
 
 Sound Support - Yes (.mp3)<br>

@@ -12,7 +12,7 @@ DrawSquare Support - Yes<br>
 
 
 Text Support - No<br>
-Texture Support - Yes
+Texture Support - Yes (unstable and slow)
 
 
 Example Script<br>
